@@ -1,21 +1,27 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Lao:wght@500&family=Rubik&display=swap');
 
-header{
+header , .bottom-header-container{
     background-color: #131921;
     color: #fff;
 }
 
-header div{
-    /* flex: 1; */
-    /* background-color: red; */
-    /* text-align: center; */
+
+.bottom-header-container{
+    padding: 0.5rem;
+    background-color: #1a2d47;
+    font-size: 14px;
+}
+
+
+.left{ 
+    justify-content: left !important;
+
 }
 
 .full-flex{
     display: flex;
     align-items: center;
-    /* gap: 10px; */
     justify-content: center;
 }
 
@@ -60,7 +66,7 @@ span{
 
 
 
-img{
+header img{
     width: 120px;
     height:60px;
     mix-blend-mode:lighten;

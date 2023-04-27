@@ -9,11 +9,14 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
+import BottomHeader from './BottomHeader';
+
 
 
 // from 'react-icons/fa'anp
 const Header = () => {
   return (
+   <>
     <header className='full-flex space-between'>
        <div className='logo-container full-flex'>
          <img src={Logo} alt="amazone-img"  style={{position : "relative"}}/>
@@ -51,6 +54,8 @@ const Header = () => {
           <span>Cart</span>
        </div>
     </header>
+    <BottomHeader/>
+    </>
   )
 }
 

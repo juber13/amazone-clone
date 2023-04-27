@@ -1,0 +1,57 @@
+.card-container{
+    width: 100%;
+    position: absolute;
+    top: 55%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 290px;
+    height: 350px;
+    border:1px solid #ddd;
+    color: #fff;
+    padding: 2rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #fff;
+    color: #000;
+}
+
+.card h2{
+    font-size:20px;
+}
+
+.card img{
+    margin-top: 10px;
+    width:100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.card .mob-container{
+display: flex;
+flex-wrap: wrap;
+/* gap: 10px; */
+justify-content: space-evenly;
+}
+
+.mob{
+    max-width: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card .mob img{
+  width: 130px;
+  height: 120px;
+}
+
+.seeAll-text{
+    position: relative;
+    top: 10px;
+    color: #567890;
+}
