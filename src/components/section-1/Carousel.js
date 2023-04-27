@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./carousel.css";
 import FirstImg from './images/Deals-PC-3000-Unrec._CB592487741_.jpg'
 import secondImg from './images/Haircare-Herofader-PC11._CB592208139_.jpg'
-import thirdImg from './images/PC-HERO-3000X1200._CB591025573_.jpg'
 import fourthImg from './images/61aURrton0L._SX3000_.jpg'
 import fifthImg from './images/WA3000._CB592962828_.jpg'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';

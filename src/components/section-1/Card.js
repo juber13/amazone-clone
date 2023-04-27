@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './card.css'
 import data from '../../../src/StoreData'
 import Box from './Box'
