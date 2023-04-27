@@ -2,7 +2,6 @@ import React from 'react'
 
 
 const MultiCard = ({it}) =>{
-    console.log(it)
     return (
        <>
           <div className='mob-container'>

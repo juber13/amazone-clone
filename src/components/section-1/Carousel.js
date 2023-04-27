@@ -7,7 +7,6 @@ import fifthImg from './images/WA3000._CB592962828_.jpg'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftSharpIcon from '@mui/icons-material/ChevronLeftSharp';
 
-import Card from "./Card";
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -95,7 +94,6 @@ const Carousel = () => {
         </div>
       </div>
 
-      <Card/>
 
     </>
   );
