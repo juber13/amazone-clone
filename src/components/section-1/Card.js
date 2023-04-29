@@ -9,6 +9,7 @@ const Card = () => {
    <div className="card-container">  
      {data.map(item => <Box item={item}/>)}
      <Deals/>
+     <Deals/>
    </div>
   )
 }
