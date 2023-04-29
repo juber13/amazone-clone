@@ -9,16 +9,17 @@ import mob1 from "./components/section-1/images/advertiesmentImages/D78091548_Ma
 import mob2 from "./components/section-1/images/advertiesmentImages/D78091548_MayART_Central-Latest-Launches-Page_DEsign-SIM_PC_QuadCard_186X116_2._SY116_CB591041374_.jpg";
 import mob3 from "./components/section-1/images/advertiesmentImages/D78091548_MayART_Central-Latest-Launches-Page_DEsign-SIM_PC_QuadCard_186X116_3._SY116_CB591041374_.jpg";
 import mob4 from "./components/section-1/images/advertiesmentImages/D78091548_MayART_Central-Latest-Launches-Page_DEsign-SIM_PC_QuadCard_186X116_4._SY116_CB591041374_.jpg";
-import mob5 from './components/section-1/images/MF-1-186-116._SY116_CB636110853_.jpg';
-import mob6 from './components/section-1/images/MF-2-186-116._SY116_CB636110853_.jpg'
-import mob7 from './components/section-1/images/MF-3-186-116._SY116_CB636110853_.jpg'
-import mob8 from './components/section-1/images/MF-4-186-116._SY116_CB636110853_.jpg'
-import mob9 from './components/section-1/images/advertiesmentImages/kitchen186._SY116_CB592083129_.jpg'
-import mob10 from './components/section-1/images/advertiesmentImages/xcm_banners_tile4-home_186x116_in-en._SY116_CB612501080_.jpg'
-import mob11 from './components/section-1/images/advertiesmentImages/xcm_banners_tile2-kitchen_186x116_in-en._SY116_CB612501062_.jpg'
-
+// import mob5 from './components/section-1/images/MF-1-186-116._SY116_CB636110853_.jpg';
+// import mob6 from './components/section-1/images/MF-2-186-116._SY116_CB636110853_.jpg'
+// import mob7 from './components/section-1/images/MF-3-186-116._SY116_CB636110853_.jpg'
+// import mob8 from './components/section-1/images/MF-4-186-116._SY116_CB636110853_.jpg'
+// import mob9 from './components/section-1/images/advertiesmentImages/kitchen186._SY116_CB592083129_.jpg'
+// import mob10 from './components/section-1/images/advertiesmentImages/xcm_banners_tile4-home_186x116_in-en._SY116_CB612501080_.jpg'
+// import mob11 from './components/section-1/images/advertiesmentImages/xcm_banners_tile2-kitchen_186x116_in-en._SY116_CB612501062_.jpg'
+import man from './components/section-1/images/advertiesmentImages/61t4dx-94TL._AC_UL600_FMwebp_QL65_.webp'
 // deals images
-
+import Bag from './components/section-1/images/advertiesmentImages/bag.jpg'
+import shoes from './components/section-1/images/advertiesmentImages/shoes.webp'
 
 const storeData = [
   {
@@ -69,7 +70,7 @@ const storeData = [
   {
     type: "card",
     heading: "Starting ₹79 | Amazon Brands & more",
-    img : pc,
+    img : man,
     store: [],
     show: "See All",
   },
@@ -77,48 +78,18 @@ const storeData = [
   {
     type: "card",
     heading: "Up to 60% off | Styles for men",
-    img : pc,
-    store: [{
-      text: "OnePlus Nord CE 3 Lite 5G | Starting ₹19,999",
-      img: mob5,
-    },
-    {
-      text: "Samsung M14 5G | Starting ₹14,990",
-      img: mob6,
-    },
-    {
-      text: "Realme narzo N55 | Starting ₹10,999",
-      img: mob7,
-    },
-    {
-      text: "Explore all new launches",
-      img: mob8,
-    }
-   ],
+    // img : pc,
+    img: Bag,
+    store: [],
     show: "See All",
   },
 
   {
     type: "card",
     heading: "Up to 70% off | Clearance store",
-    img : clearneceStore,
-    store: [{
-      text: "Starting ₹149 | Choppers & more",
-      img: mob9,
-    },
-    {
-      text: "Starting ₹79 | String lights & more",
-      img: mob8,
-    },
-    {
-      text: "Starting ₹239 | Kitchen storage & containers",
-      img: mob10,
-    },
-    {
-      text: "Starting ₹189 | Wall stickers & more",
-      img: mob11,
-    }
-   ],
+    img: shoes,
+    // img : clearneceStore,
+    store: [],
     show: "See All",
   },
 
