@@ -16,7 +16,6 @@ import mob8 from './components/section-1/images/MF-4-186-116._SY116_CB636110853_
 import mob9 from './components/section-1/images/advertiesmentImages/kitchen186._SY116_CB592083129_.jpg'
 import mob10 from './components/section-1/images/advertiesmentImages/xcm_banners_tile4-home_186x116_in-en._SY116_CB612501080_.jpg'
 import mob11 from './components/section-1/images/advertiesmentImages/xcm_banners_tile2-kitchen_186x116_in-en._SY116_CB612501062_.jpg'
-import mob12 from './components/section-1/images/advertiesmentImages/xcm_banners_tile4-home_186x116_in-en._SY116_CB612501080_.jpg'
 
 // deals images
 
