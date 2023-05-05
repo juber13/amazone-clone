@@ -19,25 +19,25 @@ import mob4 from "./components/section-1/images/advertiesmentImages/D78091548_Ma
 import man from './components/section-1/images/advertiesmentImages/61t4dx-94TL._AC_UL600_FMwebp_QL65_.webp'
 // deals images
 import Bag from './components/section-1/images/advertiesmentImages/bag.jpg'
-import shoes from './components/section-1/images/advertiesmentImages/shoes.webp'
+import shoes from './components/section-1/81JyI9C7exL._AC_UL600_FMwebp_QL65_.webp'
 
 const storeData = [
   {
-    type: "card",
+    type: "great-summber-sale",
     heading: "Great Summer sale",
     img: MyartImage,
     store: [],
     show: "See All",
   },
   {
-    type: "card",
+    type: "pharmacy",
     heading: "Up to 50% off | Monitor blood sugar at home",
     img: Pharmacy,
     store: [],
     show: "See All",
   },
   {
-    type: "card",
+    type: "upcomings-mobiles",
     heading: "Latest and upcoming launches",
     store: [
       {
@@ -61,14 +61,14 @@ const storeData = [
     show: "See All offers",
   },
   {
-    type: "card",
+    type: "bluetooths",
     heading: "Bluetooth Calling Smartwatch starts at ₹1,999",
     img : pc,
     store: [],
     show: "See All",
   },
   {
-    type: "card",
+    type: "t-shirt",
     heading: "Starting ₹79 | Amazon Brands & more",
     img : man,
     store: [],
@@ -76,7 +76,7 @@ const storeData = [
   },
 
   {
-    type: "card",
+    type: "bags",
     heading: "Up to 60% off | Styles for men",
     // img : pc,
     img: Bag,
@@ -85,7 +85,7 @@ const storeData = [
   },
 
   {
-    type: "card",
+    type: "shoes",
     heading: "Up to 70% off | Clearance store",
     img: shoes,
     // img : clearneceStore,
@@ -94,7 +94,7 @@ const storeData = [
   },
 
   {
-    type: "card",
+    type: "electronics",
     heading: "Starting ₹79 | Amazon Brands & more",
     img : clearneceStore,
     store: [],
@@ -103,9 +103,5 @@ const storeData = [
 ];
 
 
-
-
- 
-
-
+// export default ;
 export default storeData;

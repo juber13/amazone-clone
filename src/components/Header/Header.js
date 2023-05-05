@@ -10,7 +10,7 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 import BottomHeader from './BottomHeader';
-
+import { Link } from 'react-router-dom';
 
 
 // from 'react-icons/fa'anp
@@ -19,7 +19,7 @@ const Header = () => {
    <>
     <header className='full-flex space-between'>
        <div className='logo-container full-flex'>
-         <img src={Logo} alt="amazone-img"  style={{position : "relative"}}/>
+         <Link to=""><img src={Logo} alt="amazone-img"  style={{position : "relative"}}/></Link>
          <small style={{position : "absolute" ,  top : "1.4rem" , left : "7.5rem"}}>.in</small>
        </div>
 

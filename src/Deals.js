@@ -37,9 +37,9 @@ const todayDeals = [
         <div className='deals-container'>
             <h3 style={{marginLeft:"1rem"}}>Today's Deals <span style={{color : "#456789"}}>See All Deals</span></h3>
         <div className='container'>
-          {todayDeals.map(deal => {
+          {todayDeals.map((deal , index) => {
             return(
-                <div className='deals'>
+                <div className='deals' key={index}>
                     <div className='img-container'>
                      <img src={deal.img} alt="" />
                     </div>

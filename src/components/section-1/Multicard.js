@@ -5,10 +5,10 @@ const MultiCard = ({it}) =>{
     return (
        <>
           <div className='mob-container'>
-          {it.store.map((t) => {
+          {it.store.map((t , index) => {
           return(
-             <div className='mob1 mob'>
-             <img src={t.img} alt="" />
+             <div className='mob1 mob' key={index}>
+             <img src={t.img} alt="" data-index={t.type}/>
              <span style={{fontSize : "10px" , font :"wrap"}}>{t.text}</span>
          </div>
        )
