@@ -18,10 +18,12 @@
 }
 
 
-.deals-container{
-    background-color: #fff;
+ .deals-container{
+    width: 100%;
+    background-color:#fff;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding:10px;
+    overflow: hidden;
 
 }
 .deals-container .container{

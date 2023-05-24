@@ -1,24 +1,26 @@
 import React from "react";
 // import {Edit} from '@material-ui/icons/Edit';
 import "./Header.css";
-import Logo from "./Amazon-Logo-Font-1-scaled.webp";
-import IndianFlag from "./download.png";
-// import {SearchIcon } from "@mui/icons-material";
+import { Link } from "react-router-dom";
+
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
-import BottomHeader from "./BottomHeader";
-import { Link } from "react-router-dom";
+
+// import BottomHeader from "./BottomHeader";
+
+import {useSelector} from 'react-redux'
 
 // from 'react-icons/fa'anp
 const Header = () => {
+  const items = useSelector(state => state.counter);
+
   return (
+    <>
     <div className="header">
-      <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="" className="header__logo" />
+      <Link to="/"><img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="" className="header__logo" /></Link>
       <div className="header__search">
-        <input type="text" className="header__searchInput" />
+        <input type="text" className="header__searchInput" placeholder="Search..."/>
         <SearchIcon className="header__searcIcon search-btn"/>
       </div>
 
@@ -37,10 +39,12 @@ const Header = () => {
         </div>
         <div className="header__optionBasket">
             <ShoppingCartOutlinedIcon />
-          <span className="header__optionTwo header__basket">0</span>
+          <span className="header__optionTwo header__basket">{items}</span>
         </div>
       </div>
     </div>
+    {/* <BottomHeader/> */}
+    </>
   );
 };
 
