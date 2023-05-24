@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 // https://fakestoreapi.com/products
 const Box = ({item}) =>{
    const addItemToCart = (e) => {
