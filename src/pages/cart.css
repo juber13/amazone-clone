@@ -1,0 +1,31 @@
+.cart__container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
+
+}
+
+.cart__content{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,0,0.4);
+    justify-content: space-around;
+    gap: 10px;
+    padding: 10px 0 0px 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+.cart__content img{
+    width: 100px;
+    height: 100px;
+    mix-blend-mode: color-burn;
+}
+
+.remove__cartItem_btn{
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}

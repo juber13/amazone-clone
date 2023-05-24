@@ -13,7 +13,7 @@ import {useSelector} from 'react-redux'
 
 // from 'react-icons/fa'anp
 const Header = () => {
-  const items = useSelector(state => state.counter);
+  const items = useSelector(state => state.cart.length);
 
   return (
     <>
@@ -38,7 +38,7 @@ const Header = () => {
           <span className="header__optionTwo">Prime</span>
         </div>
         <div className="header__optionBasket">
-            <ShoppingCartOutlinedIcon />
+            <Link to="/cart"><ShoppingCartOutlinedIcon /></Link>
           <span className="header__optionTwo header__basket">{items}</span>
         </div>
       </div>
