@@ -12,13 +12,10 @@ export const cartSlice = createSlice({
             // console.log("also working")
             return state.filter((item) => item.id !== action.payload);
         },
-
-        // reset : (state) => {
-        //     console.log('it/s also working');
-        // }
+      
     }
 })
 
+
 export const {addToCart , removeToCart , reset} = cartSlice.actions;
-// export const selectCount = (state) => state.counter.value;
 export default cartSlice.reducer;

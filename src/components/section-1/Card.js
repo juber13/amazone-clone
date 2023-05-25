@@ -6,20 +6,31 @@ import Deals from '../../Deals'
 
 const Card = () => {
   const [data , setData] = useState([]);
-  
+  const [loding , setLoading] = useState(false);
+
+      
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch('https://fakestoreapi.com/products');
-      const data = await res.json();
-      setData(data);
+      try{
+        setLoading(true);
+        const res = await fetch('https://fakestoreapi.com/products');
+        const data = await res.json();
+        setData(data);
+        setLoading(false);
+
+      }catch(err){
+        console.log(err);
+      }
     }
+  
+ 
     fetchData();
   },[])
 
   
   return (
    <div className="card-container" >  
-     {data.map((item , index) => <Box item={item} key={index}/>)}
+     {loding ? <div className='loding'></div> : data.map((item , index) => <Box item={item} key={index}/>)}
      <Deals/>
    </div>
   )
