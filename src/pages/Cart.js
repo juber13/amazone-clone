@@ -4,7 +4,7 @@ import {removeToCart} from '../reduxStore/features/counters/counterSlice'
 
 import './cart.css';
 const Cart = () => {
-  const [productQuentity , setProductQuentity] = useState(1);
+  // const [productQuentity , setProductQuentity] = useState(1);
   const products = useSelector(state => state.cart);
   const [data , setData] = useState(products);
   const dispatch = useDispatch();
