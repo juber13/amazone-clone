@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../reduxStore/features/counters/counterSlice'
-import ProductDetails from '../../pages/ProductDetails';
 // import { showDetail } from '../../reduxStore/features/counters/productSlice';
 
 const Box = ({item}) =>{
@@ -13,12 +12,6 @@ const Box = ({item}) =>{
       disPatch(addToCart(product));
 
    }
-
-   // const fetchSingleProduct = async(id) =>{
-   //    const res = await fetch(`https://fakestoreapi.com/products/${id}`);
-   //    const data = await res.json();
-   //    return data;
-   // }
 
    const showDetails = (id) => {
       navigate(`/product/${id}`);

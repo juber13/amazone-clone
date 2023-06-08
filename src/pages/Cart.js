@@ -1,15 +1,10 @@
-import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeToCart } from "../reduxStore/features/counters/counterSlice";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-
-
 import "./cart.css";
-import { useEffect } from "react";
 const Cart = () => {
   // const [productQuentity , setProductQuentity] = useState(1);
   const products = useSelector((state) => state.cart);
-  const [data, setData] = useState(products);
   const dispatch = useDispatch();
 
   const removeFromCart = (id) => {
