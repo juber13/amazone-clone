@@ -10,7 +10,7 @@ function App() {
         <Header/>
         <Router/>
     </div>
-  );
+);
 }
 
 export default App;

@@ -14,7 +14,7 @@ const Ruoter = () => {
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/cart' element={<Cart />} />
-        <Route path='/product-details' element={<ProductDetails />} />
+        <Route path='/product/:id' element={<ProductDetails />} />
         <Route path='/*' element={<PageNotFound />} />
     </Routes>
   )

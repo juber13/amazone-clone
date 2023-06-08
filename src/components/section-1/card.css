@@ -133,3 +133,29 @@ justify-content: space-evenly;
         transform: rotate(360deg);
     }
 }
+
+
+.product-details-container{
+  max-width: 600px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between;
+   */
+   gap: 10px;
+  padding: 10px;
+}
+
+.product-details-container .product-info{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-details-container img{
+    width: 200px;
+}

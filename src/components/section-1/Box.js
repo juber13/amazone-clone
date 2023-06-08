@@ -1,23 +1,28 @@
-// import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
-
 import { addToCart } from '../../reduxStore/features/counters/counterSlice'
-import {productSlice} from '../../reduxStore/features/counters/productSlice'
+import ProductDetails from '../../pages/ProductDetails';
+// import { showDetail } from '../../reduxStore/features/counters/productSlice';
+
 const Box = ({item}) =>{
    const disPatch = useDispatch();
-   const disPatch2 = useDispatch();
+   const navigate = useNavigate();
    // const [products , setProducts] = useState([]);
    
    const addItemToCart = (product) => {
-      // console.log(item);
       disPatch(addToCart(product));
 
    }
 
-   const showProductDetails = (item) =>{
-      disPatch2(productSlice(item));
-   }
+   // const fetchSingleProduct = async(id) =>{
+   //    const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+   //    const data = await res.json();
+   //    return data;
+   // }
 
+   const showDetails = (id) => {
+      navigate(`/product/${id}`);
+   }
 
     return(
        <div className='card'  data-category={item.category} key={item.id}>
@@ -26,7 +31,7 @@ const Box = ({item}) =>{
           <p className='seeAll-text'>Price {item.price}</p>
           <div className='btn-container'>
            <button className='btn add__card__button' onClick={() => addItemToCart(item)} data-index={item.id}>Add To Card</button>
-           <button className='btn checkout__card__button' onClick={() => showProductDetails(item)} data-index={item.id}>Chekout</button>
+           <button className='btn checkout__card__button' onClick={() => showDetails(item.id)}>Chekout</button>
           </div>
        </div>
     )
