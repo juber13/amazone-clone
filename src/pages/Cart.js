@@ -1,26 +1,26 @@
-import { useSelector, useDispatch } from "react-redux";
-import { removeToCart } from "../reduxStore/features/counters/counterSlice";
+import { useEffect, useState } from "react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import "./cart.css";
+import { CartState } from "../Context";
 const Cart = () => {
-  // const [productQuentity , setProductQuentity] = useState(1);
-  const products = useSelector((state) => state.cart);
-  const dispatch = useDispatch();
+  const [total , setAmount] = useState();
+  const {state , disPatch} = CartState();
 
-  const removeFromCart = (id) => {
-    dispatch(removeToCart(id));
-  };
+
+   useEffect(() => {
+    setAmount(state.cart.reduce((acc , curr) => acc + Number(curr.price) * curr.qty , 0))
+   },[state.cart])
 
   return (
     <div className="cart-wrapper">
       <div className="cart__container">
-        {products.length <= 0 ? (
+        {state.cart.length <= 0 ? (
           <div className="empty-cart-content">
            <h4><ShoppingCartOutlinedIcon/></h4>
           <h3>Empty Cart</h3>
           </div>
         ) : (
-          products.map((product) => (
+          state.cart.map((product) => (
             <div className="cart__content" key={product.id}>
               <h4 className="cart__title">{product.title}</h4>
               <img
@@ -29,9 +29,15 @@ const Cart = () => {
                 alt={product.title}
               />
               <h5>{product.price}</h5>
+              <select name="" id="" onChange={(e) => disPatch({type : "CHANGE_QTY" , payload : {id : product.id , qty : e.target.value}})}>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
               <button
                 className="remove__cartItem_btn"
-                onClick={() => removeFromCart(product.id)}
+                onClick={() => disPatch({type: "REMOVE_TO_CART" , payload : product})}
               >
                 Remove
               </button>
@@ -39,7 +45,7 @@ const Cart = () => {
           ))
         )}
       </div>
-      {products.length > 0 ? 
+      {state.cart.length > 0 ? 
       <div className="amount-container">
         <table>
           <tr>
@@ -49,23 +55,17 @@ const Cart = () => {
             {/* <th>Qty</th> */}
           </tr>
           {/* <tr> */}
-          {products.map((product, index) => (
+          {state.cart.map((product, index) => (
             <tr>
               <td>{index + 1}</td>
-              <td>{product.title.slice(0, 35) + "..."}</td>
+              <td>{product.title}</td>
               <td>{product.price}</td>
             </tr>
           ))}
           <tr>
             <td>Total</td>
             <td>GST 18%</td>
-            <td>
-              {" "}
-              {products
-                .map((pro) => pro.price)
-                .reduce((total, acc) => total + acc, 0)}
-            </td>
-            {/* <td>{new Date().toLocaleDateString()}</td> */}
+            <td>{Math.floor(total)}</td>
           </tr>
           {/* </tr> */}
         </table>

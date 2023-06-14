@@ -1,10 +1,6 @@
-// import React, { useEffect } from 'react'
 import { useEffect, useState } from 'react';
-// import { useSelector } from 'react-redux'
-// import Sidebar from '../components/Sidebar';
 const ProductDetails = () => {
   const[data , setData] = useState({});
-  // const product = useSelector((state) => state.cart);
   const url = window.location.pathname;
   const id = url.split("").slice(url.length -1).toString();
 

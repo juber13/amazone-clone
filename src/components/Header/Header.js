@@ -5,15 +5,18 @@ import { Link } from "react-router-dom";
 
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-
-
-// import BottomHeader from "./BottomHeader";
-
-import {useSelector} from 'react-redux'
+import { CartState } from "../../Context";
 
 // from 'react-icons/fa'anp
 const Header = () => {
-  const items = useSelector(state => state.cart.length);
+  const {state} = CartState();
+  // const [toggle , setToggle] = useState(false);
+
+  // function filterOutproducts(product){
+  //   let sortedProducts = product;
+  //   if (searchQuery) sortedProducts = sortedProducts.filter((prod) => prod.name.toLowerCase().includes(searchQuery));
+  //    return sortedProducts;
+  // }
 
   return (
     <>
@@ -39,10 +42,16 @@ const Header = () => {
         </div>
         <div className="header__optionBasket">
             <Link to="/cart"><ShoppingCartOutlinedIcon /></Link>
-          <span className="header__optionTwo header__basket">{items}</span>
+          <span className="header__optionTwo header__basket">{state.cart.length}</span>
         </div>
       </div>
     </div>
+    {/* <div className={toggle ? "search-item-container active" :"search-item-container"}>
+     <ul>
+      {state.products.map((item) => <Link><li>{item.title}</li></Link>)}
+     </ul>
+    </div> */}
+     
     {/* <BottomHeader/> */}
     </>
   );
