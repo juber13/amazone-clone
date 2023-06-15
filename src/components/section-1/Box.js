@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../../reduxStore/features/counters/counterSlice";
+// import { useDispatch } from "react-redux";
+// import { addToCart } from "../../reduxStore/features/counters/counterSlice";
 // import { showDetail } from '../../reduxStore/features/counters/productSlice';
 import { CartState } from "../../Context";
 

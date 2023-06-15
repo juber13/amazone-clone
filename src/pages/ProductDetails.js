@@ -4,8 +4,6 @@ const ProductDetails = () => {
   const url = window.location.pathname;
   const id = url.split("").slice(url.length -1).toString();
 
-
-
   const fetchProduct = async() => {
     try{
       const res = await fetch(`https://fakestoreapi.com/products/${id}`);
@@ -18,7 +16,7 @@ const ProductDetails = () => {
 
   useEffect(() => {
      fetchProduct();
-  },[])
+  },)
 
   console.log(data);
 
