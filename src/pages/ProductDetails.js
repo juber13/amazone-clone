@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState} from 'react';
+import {useParams} from 'react-router-dom'
 const ProductDetails = () => {
   const[data , setData] = useState({});
-  const url = window.location.pathname;
-  const id = url.split("").slice(url.length -1).toString();
+  const {id} = useParams();
 
   const fetchProduct = async() => {
     try{
@@ -23,7 +23,6 @@ const ProductDetails = () => {
 
   return (
     <div className="wrapper">
-    {/* <Sidebar/> */}
     <div className='product-details-container'  data-category={data.category} key={data.id}>
            <div className="product-img">
              <img src={data.image} alt="" data-index={data.type}/>

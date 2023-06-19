@@ -4,7 +4,7 @@ import "./cart.css";
 import { CartState } from "../Context";
 const Cart = () => {
   const [total , setAmount] = useState();
-  const {state , disPatch} = CartState();
+  const {state , dispatch} = CartState();
 
 
    useEffect(() => {
@@ -29,7 +29,7 @@ const Cart = () => {
                 alt={product.title}
               />
               <h5>{product.price}</h5>
-              <select name="" id="" onChange={(e) => disPatch({type : "CHANGE_QTY" , payload : {id : product.id , qty : e.target.value}})}>
+              <select name="" id="" onChange={(e) => dispatch({type : "CHANGE_QTY" , payload : {id : product.id , qty : e.target.value}})}>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -37,7 +37,7 @@ const Cart = () => {
               </select>
               <button
                 className="remove__cartItem_btn"
-                onClick={() => disPatch({type: "REMOVE_TO_CART" , payload : product})}
+                onClick={() =>dispatch({type: "REMOVE_TO_CART" , payload : product})}
               >
                 Remove
               </button>

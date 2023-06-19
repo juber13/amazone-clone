@@ -1,5 +1,4 @@
 import React from "react";
-// import {Edit} from '@material-ui/icons/Edit';
 import "./Header.css";
 import { Link } from "react-router-dom";
 
@@ -7,17 +6,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { CartState } from "../../Context";
 
-// from 'react-icons/fa'anp
 const Header = () => {
   const {state} = CartState();
-  // const [toggle , setToggle] = useState(false);
-
-  // function filterOutproducts(product){
-  //   let sortedProducts = product;
-  //   if (searchQuery) sortedProducts = sortedProducts.filter((prod) => prod.name.toLowerCase().includes(searchQuery));
-  //    return sortedProducts;
-  // }
-
   return (
     <>
     <div className="header">
@@ -46,13 +36,6 @@ const Header = () => {
         </div>
       </div>
     </div>
-    {/* <div className={toggle ? "search-item-container active" :"search-item-container"}>
-     <ul>
-      {state.products.map((item) => <Link><li>{item.title}</li></Link>)}
-     </ul>
-    </div> */}
-     
-    {/* <BottomHeader/> */}
     </>
   );
 };

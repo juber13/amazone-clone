@@ -9,7 +9,6 @@ const Login = () => {
     <div className="container">
       <div className="form-container">
         <span className="logo">Login</span>
-        {/* <span className='title' style={{marginTop: "5px"}}>Login</span> */}
         <form autoComplete="off">
           <input type="text" placeholder="Email" />
           <input type="password" placeholder="Password" />
