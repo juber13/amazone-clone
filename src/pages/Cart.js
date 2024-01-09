@@ -3,7 +3,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import "./cart.css";
 import { CartState } from "../Context";
 const Cart = () => {
-  const [total , setAmount] = useState();
+  const [total , setAmount] = useState(0);
   const {state , dispatch} = CartState();
 
 

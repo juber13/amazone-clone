@@ -1,6 +1,7 @@
 import { useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom'
 const ProductDetails = () => {
+
   const[data , setData] = useState({});
   const {id} = useParams();
 
@@ -16,10 +17,8 @@ const ProductDetails = () => {
 
   useEffect(() => {
      fetchProduct();
-  },)
-
-  console.log(data);
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
 
   return (
     <div className="wrapper">

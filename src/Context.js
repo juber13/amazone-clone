@@ -5,21 +5,15 @@ import React, {
   useReducer,
   useState,
 } from "react";
+
+// import {cartReducers} from "./cartReducers";
 import cartReducers from "./cartReducers";
+import { productReducer } from "./cartReducers";
 const Cart = createContext();
 
 const Context = ({ children }) => {
   const [loding, setLoading] = useState(false);
-  const [state, dispatch] = useReducer(cartReducers, {
-    products: [],
-    cart: [],
-  });
-
-  // const fetchData = async () => {
-   
-  // };
-
-  
+  const [state, dispatch] = useReducer(cartReducers, { products: [], cart: []});
 
   useEffect(() => {
     const fetchData  = async () => {
@@ -39,10 +33,10 @@ const Context = ({ children }) => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
 
-  const [productState] = useReducer(cartReducers, { searchQuery: "", });
+  const [productState , productDispatch] = useReducer(productReducer, { searchQuery: "", });
 
   return (
-    <Cart.Provider value={{ state, dispatch, loding, productState }}>
+    <Cart.Provider value={{ state, dispatch, loding, productState , productDispatch }}>
       {children}
     </Cart.Provider>
   );

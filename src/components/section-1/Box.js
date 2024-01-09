@@ -16,8 +16,9 @@ const Box = ({ item }) => {
       <img src={item.image} alt="" data-index={item.type} />
       <p className="seeAll-text">Price {item.price}</p>
       <div className="btn-container">
-        {state.cart.some((pro) => pro.id === item.id) ? (
-          <button className="btn add__card__button" onClick={() => dispatch({type : "REMOVE_TO_CART" , payload : item})}>Remove To Cart</button>
+        {state.cart.some((pro) => pro.id === item.id) ? 
+        (
+          <button className="btn add__card__button" onClick={() => dispatch({ type: "REMOVE_TO_CART", payload: item })}>Remove To Cart</button>
         ) : (
           <button
             className="btn add__card__button"
@@ -27,10 +28,7 @@ const Box = ({ item }) => {
           </button>
         )}
 
-        <button
-          className="btn checkout__card__button"
-          onClick={() => showDetails(item.id)}
-        >
+        <button className="btn checkout__card__button" onClick={() => showDetails(item.id)}>
           Chekout
         </button>
       </div>
